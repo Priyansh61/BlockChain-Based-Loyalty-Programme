@@ -54,7 +54,7 @@ function signuppage()
         console.log(data.data.name);
         localStorage.setItem("userInfo", JSON.stringify(data));
         localStorage.setItem("role","buyer");
-        router.push('/user');
+        router.push('/');
   
       }
       
