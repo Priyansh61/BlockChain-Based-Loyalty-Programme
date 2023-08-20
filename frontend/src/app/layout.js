@@ -36,10 +36,6 @@ const wagmiConfig = createConfig({
   publicClient
 })
 
-// export const metadata = {
-//   title: 'RootKart',
-//   description: 'Grid 5.0',s
-// }
 
 function RootLayout({ children }) {
   return (

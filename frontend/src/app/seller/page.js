@@ -5,13 +5,22 @@ import Link from 'next/link';
 import AProductCard from '../../components/AProductCard';
 import React, { useEffect, useState } from 'react'
 import Connectbutton from '@/components/Connectbutton';
-import Footer from '@/components/Fotter';
+import { useRouter } from 'next/navigation'
+
+// import Footer from '@/components/Fotter';
 
 function page() {
     const [seller,setSeller] = useState();
     const [sellerId,setSellerId] = useState();
     const [products,setProducts] = useState();
     const [loading,setLoading] = useState(true);
+    const router = useRouter()
+
+     const handleLogout = () => {
+
+        localStorage.clear();
+        router.push("/")      
+    }
 
     // Use useEffect to retrieve userInfo from localStorage
     useEffect(() => {
@@ -50,11 +59,12 @@ function page() {
       }
     }
 
+
     return (
       <div className="bg-white min-h-screen text-black">
-      <nav className="bg-blue-600 text-white py-2">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="flex items-center space-x-2">
+      <nav className="bg-blue-600 text-white py-2 w-full">
+        <div className="mx-[20px] flex justify-between items-center">
+          <div className="flex items-center gap-3">
             <img
               src="/root.png"
               alt="Your Logo"
@@ -63,15 +73,16 @@ function page() {
             <div className="text-2xl font-bold">RootKart</div>
           </div>
           <div className="text-2xl font-bold">{loading?(<>Loading...</>):(<>{seller.name}'s Deshboard</>)}</div>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center gap-3">
             <span className="text-sm">Supercoins: 123</span>
             <span className="text-sm">Rewards: 456</span>
             <Connectbutton/>
+            <button onClick={handleLogout} className="text-[#2874f0] text-[16px] font-medium bg-white cursor-pointer rounded-sm h-[32px] py-[5px] px-[40px] border border-solid border-[#dbdbdb]"> Logout </button>
           </div>
         </div>
       </nav>
 
-      <div className="container mx-auto py-12">
+      <div className="mx-auto p-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <Link href="/seller/addproduct">
               <div className="item">
@@ -149,7 +160,7 @@ function page() {
         }
       `}</style>
     </div>
-    <Footer />
+    {/* <Footer /> */}
     </div>
   );
     
