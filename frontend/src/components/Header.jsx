@@ -6,7 +6,7 @@ import Link from "next/link";
 import { navData } from "../../assets/DummyData/data";
 import { CiDeliveryTruck } from "react-icons/ci"
 import { useAccount } from "wagmi";
-import { useRouter } from 'next/navigation'
+import Connectbutton from "./Connectbutton";
 
 
 const Header = () => {
@@ -53,7 +53,7 @@ const Header = () => {
                 {userinfo
 
 
-                    ? <div className="flex gap-3">
+                    ? <div className="flex gap-3 items-center">
                         {/* Icon start */}
                         <Link href="/user/supercoin">
                             <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative">
@@ -75,9 +75,11 @@ const Header = () => {
                             </div>
                         </Link>
                         {/* Icon end */}
+                        <Connectbutton address={address}/>
                     </div>
                     : null
                 }
+                
             </header>
             <div className="flex justify-between mx-[130px] mt-[4em]">
                 {navData.map((temp) => (
