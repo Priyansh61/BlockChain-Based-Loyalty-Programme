@@ -6,7 +6,7 @@ import AddToCartButton from './AddToCart'
 import { useParams } from 'next/navigation';
 import axios from 'axios';
 import Header from '@/components/Header';
-import Footer from '@/components/Fotter';
+// import Footer from '@/components/Fotter';
 
 export default function ProductPage( ) {
   const [isLoading,setLoading] = useState(true);
@@ -40,7 +40,6 @@ export default function ProductPage( ) {
     
   return (
     <div>
-    <Header />
   {isLoading ? (
     <div className="text-center my-8">Loading...</div>
   ) : (
@@ -66,7 +65,7 @@ export default function ProductPage( ) {
       </div>
     </div>
   )}
-  <Footer/>
+  {/* <Footer/> */}
 </div>
 
   )

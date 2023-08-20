@@ -46,8 +46,9 @@ function loginPage() {
         // setUser(data.data);
         // console.log(data.data.name);
         localStorage.setItem("userInfo", JSON.stringify(data));
+        console.log(data);
         localStorage.setItem("role","buyer");
-        router.push('/user');
+        router.push('/');
   
       }
       
@@ -102,10 +103,6 @@ function loginPage() {
           >
             Submit
           </button>
-          
-          {/* <div >
-            <ConnectButton label="Sign in"/>
-          </div> */}
 
         </form>
         <div className="mt-4 text-center">

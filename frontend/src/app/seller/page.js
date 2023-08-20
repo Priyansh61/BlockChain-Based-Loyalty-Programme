@@ -5,7 +5,7 @@ import Link from 'next/link';
 import AProductCard from '../../components/AProductCard';
 import React, { useEffect, useState } from 'react'
 import Connectbutton from '@/components/Connectbutton';
-import Footer from '@/components/Fotter';
+// import Footer from '@/components/Fotter';
 
 function page() {
     const [seller,setSeller] = useState();
@@ -149,7 +149,7 @@ function page() {
         }
       `}</style>
     </div>
-    <Footer />
+    {/* <Footer /> */}
     </div>
   );
     
