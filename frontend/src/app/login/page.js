@@ -106,9 +106,9 @@ function loginPage() {
 
         </form>
         <div className="mt-4 text-center">
-          New User?{' '}
+          Create new account?{' '}
           <Link href="/signup" className="text-blue-500">
-            Click Here
+            SignUp
           </Link>
         </div>
       </div>

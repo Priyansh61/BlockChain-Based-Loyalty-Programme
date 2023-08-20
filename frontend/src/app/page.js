@@ -26,7 +26,7 @@ export default function Home() {
     <Header/>
       <div className="bg-white min-h-screen flex flex-col justify-center items-center">
         {!userInfo
-        ?<div className="text-balck text-center animate-fade-in-down text_box">
+        ?<div className="text-balck text-center animate-fade-in-down text_box  mt-[-12em]">
           <Image className="w-[500px]" src={HomeImg}/>
           <h1 className="text-4xl font-bold mt-[-50px]">Welcome to Our Website</h1>
         </div>

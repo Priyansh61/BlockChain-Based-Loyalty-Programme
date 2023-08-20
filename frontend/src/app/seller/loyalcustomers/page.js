@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react';
 import ToLoyalCustomer from '@/components/ContractFunctions/ToLoyalCustomers';
+import Header from '@/components/Header';
 
 const loyalcustomers = () => {
     const [threshold,setThreshold] = useState(0);
@@ -60,38 +61,7 @@ const loyalcustomers = () => {
 
     return (
         <div className="bg-gray-100 min-h-screen">
-            <nav className="bg-blue-500 text-white py-4 px-8">
-                <div className="container mx-auto flex justify-between items-center">
-                    <div className="text-xl font-bold">RootKart</div>
-                    <div className="flex items-center space-x-4">
-                        {/* Icons and numbers */}
-                        <div className="flex items-center space-x-2">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-6 w-6"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                {/* ... wallet icon path */}
-                            </svg>
-                            <span>123</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-6 w-6"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                {/* ... coin icon path */}
-                            </svg>
-                            <span>456</span>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+            <Header/>
             <div className="bg-gray-100 py-12 px-8">
                 <div className="container mx-auto bg-white border border-gray-300 shadow-lg rounded-lg p-8">
                     <h2 className="text-3xl font-semibold mb-8">Loyal Customers</h2>

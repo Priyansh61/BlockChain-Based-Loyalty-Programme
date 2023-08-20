@@ -128,9 +128,9 @@ function signuppage()
           </button>
         </form>
         <div className="mt-4 text-center">
-          Already Signed Up?{' '}
+          Already have an account?{' '}
           <Link href="/login" className="text-blue-500">
-            Login Here
+            Login
           </Link>
         </div>
         {error && <div className="text-red-500 mt-4">{error}</div>}
