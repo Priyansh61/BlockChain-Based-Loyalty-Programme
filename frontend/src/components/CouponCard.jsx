@@ -11,7 +11,7 @@ function CouponCard({ coupon }) {
   const [loading,setLoading] = useState(true);
 
   useEffect(()=> {
-    const data = JSON.parse(localStorage.getItem(userInfo)).data;
+    const data = JSON.parse(localStorage.getItem("userInfo")).data;
 
     setId(data._id);
     setLoading(false);
