@@ -50,12 +50,14 @@ function userHome() {
         )
           :
           (
+            
               <div className="my-10 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
                 {/* <div key={product._id}>{product.productName}</div> */}
                 {products?.map((product) => (
                   <AProductCard product={product} key={product._id} />
                 ))}
               </div>
+              
           )
         }
       </div>
